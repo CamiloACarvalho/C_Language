@@ -6,4 +6,5 @@ I created this repository with the intention to share some code that I developed
 All file in this repository I used C++ language. 
 I have the intention to share others program in other languem that also I studie in my bachelor degree.
 
-<iframe src="https://giphy.com/embed/jngv1bCUNMTTpsn3ZD" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/christmas-glee-rachel-berry-jngv1bCUNMTTpsn3ZD">via GIPHY</a></p>
+
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/jngv1bCUNMTTpsn3ZD" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/christmas-glee-rachel-berry-jngv1bCUNMTTpsn3ZD">via GIPHY</a></p>
