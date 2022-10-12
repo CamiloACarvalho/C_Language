@@ -1,102 +1,156 @@
 #include <stdio.h>
-#include <stdlib.h>
-// numero 2 da prova do periodo passado
-/*
-int matriz(int a[3][3], int b)
-{
-    int i,j,soma=0;
-    for(i=0;i<3;i++)
-    for(j=0;j<3;j++)
-    {
-        if(b==a[i][j])
-            soma++;
-    }
-    return soma;
-}
-int main()
-{
-    int i,j,a[3][3],x,g;
-    printf("\n Digite uma matriz: ");
-    for(i=0;i<3;i++)
-    for(j=0;j<3;j++)
-    {
-        printf("[%d]x[%d]= ",i+1,j+1);
-        scanf("%d",&a[i][j]);
-    }
-    printf("\n Digite um numero inteiro: ");
-    scanf("%d",&x);
-    g=matriz(a,x);
-    printf("\n O numero de vezes que %d aparece na matriz e': %d",x,g);
-    return 0;
-}
-*/
-//numero 2 a) da prova
-/*
-typedef struct
-{
-    char modelo[150];
-    char empresa[100];
-    float peso;
-    int vendidos;
-}celular;
-*/
-//b)
-/*
-void leitura(celular a[], int tam)
-{
-    int i;
-    for(i=0;i<tam;i++)
-    {
-        printf("\n Digite o modelo do celular: ");
-        gets(a[i].modelo);
-        printf("\n Digite a empresa do celular: ");
-        gets(a[i].empresa);
-        printf("\n Digite o peso do celular: ");
-        scanf("%f",&a[i].peso);
-        printf("\n Digite a quantidade de celulares vendidos: ");
-        scanf("%d",&a[i].vendidos);
-    }
-}
-*/
-//c)
-/*
-void imprima (celuar a[], int tam)
-{
-    int i,j,h=a[0].vendidos,ih=0,w=a[0].vendidos,iw=0;
-    for(i=0;i<tam;i++)
-    {
-        if(h>a[i].vendidos) // o h recebendo a[o].vendidos, quer dizer que dizer que ele vai comparar o primeiro cel com os outros vendidos, por isso a comparaçao de h(que é o inicio do contador) com a[i].vendidos (que vai percorrer toda a estrutura comparando o mais vendido)
-        {
-          h=a[i].vendidos; //aqui o h vai recebendo os maiores velores, ou seja, os celulares mais vendidos
-          ih=i; //guarda o indice dos celulares mais vendidos
-        }
-        if(w<a[i].vendidos)//aqui é a mesma coisa do de cima, só que é para o celular menos vendido
-        {
-            w=a[i].vendidos;
-            iw=i;//guarda o indice dos valores menores
-        }
-    }
-    printf("\n O celular mais vendido e': ");
-    puts(a[ih].empresa); // aqui é para imprimir o valor dos celulares mais vendidos, o [ih] mostra o índice desse celular, com isso sera impresso os dados desse celular guardado nesse índice
-    puts(a[ih].modelo);
-    printf("%f",a[ih].peso);
-    printf("\n O celular menos vendido e': ");//aqui é a mesma coisa, porém o [iw] mostra o índice que esta as caracteristicas do celular menos vendido
-    puts(a[iw].empresa);
-    puts(a[iw].modelo);
-    printf("%f",a[iw].peso);
-}
-*/
-//d)
-/*
-int main()
-{
-    int tam=200;
-    celular p[tam];
-    leitura (p,tam);//por ser um procedimento é só colocar leitura recebendo p (que é celular) e tam (para indicar o tamanho)
-    imprima (p,tam);//mesma coisa, só que aqui é para imprimir os valores da estrutura
-    return 0;
-}
-*/
+#include <math.h>
 
-//métado direto...olhar urgente
-//decora isso porque a prova é isso
+int main()
+{
+    //parte 2 da primeira apostila - alternativa
+    //n=1
+    int a,  b, c, delta, x1, x2;
+    printf("\n Digite os valores de a,b e c da equacao do segundo grau:\n");
+    scanf("%d %d %d", &a, &b, &c);
+    delta = pow(b,2) - 4*a*c;
+    if(delta>=0)
+    {
+        x1 = (-b + sqrt(delta)) / (2*a);
+        x2 = (-b - sqrt(delta)) / (2*a);
+        printf("\n As raizes X1 e X2 respctivamente %d,%d",x1,x2);
+    }
+    else
+    {
+        printf("\n Nao existe raizes reais.");
+    }
+
+
+    //n=2
+    //int a,b;
+    //printf("\n Digite dois numeros inteiros quaisquer para saber se maior, menor ou igual:\n");
+    //scanf("%i %i", &a, &b);
+    //if(a==b)
+    //{
+    //    printf("\n O numero %d e %d sao iguais.\n",a,b);
+    //}
+    //if(a>b)
+    //{
+    //    printf("\n O numero %d e' maior do que %d.\n",a,b);
+    //}
+    //if(a<b)
+    //{
+    //    printf("\n O numero %d e' menor do que %d.\n",a,b);
+    //}
+
+
+    //fiz errado, mas funciona tbm..huahsuhas
+    //int a,b;
+    //printf("\nDigite dois numeros inteiros quaisquer, se eles forem maiores que zero sao validos caso contrario nao validos:\n");
+    //scanf("%d %d",&a,&b);
+    //if(a&&b>0)
+    //{
+    //    printf("\nValores validos.\n");
+    //}
+    //else
+    //{
+    //    printf("\nValores invalidos.\n");
+    //}
+
+
+    //n=3
+    //int a;
+    //printf("\n Digite um numero inteiro qualquer para saber se impar ou par:\n");
+    //scanf("%d",&a);
+    //if(a%2==0)
+    //printf("\n O numero %d e' par!\n",a);
+    //else
+    //printf("\n O numero %d e' impar!\n",a);
+
+
+    //n=4
+    //int a;
+    //printf("\nDigite um numero inteiro qualquer para saber se este numero e' divisivel por 2 e 3 simultaneamente.\n");
+    //scanf("%d",a);
+    //if(a%2==0&&a%3==0)
+    //printf("\nEste numero e' divisivel por 2 e 3 ao mesmo tempo!\n");
+    //if(a%2==0&&a%3!=0)
+    //printf("\n Este numero nao e' divisivel nem por 2 e nem por 3.\n");
+    //if(a%2!=0&&a%3==0)
+    //printf("\n Este numero nao e' divisivel nem por 2 e nem por 3.\n");
+
+
+
+    //n=5
+    //int a;
+    //printf("\nDigite um numero qualquer para saber se e' divisivel por 2 e 3 e indivisivel por 5:\n");
+    //scanf("%d",a);
+    //if(a%2==0&&a%3==0)
+    //{
+    //    (a%5!=0);
+    //    printf("\n Este numero esta nestas condicoes.\n");
+    //}
+    //else
+    //printf("\n Este numero nao esta nas condicoes determinadas.\n");
+
+
+
+    //n=6
+    //int a;
+    //printf("\nDigite os numeros relacionados aos dias da semana, como 1 para domingo, e assim por diante...\n");
+    //scanf("%d",&a);
+    //switch(a)
+    //{
+    //    case 1: printf("\nDomingo\n");
+    //    break;
+    //    case 2: printf("\nSegunda-Feira\n");
+    //    break;
+    //    case 3: printf("\nTerca-Feira\n");
+    //    break;
+    //    case 4: printf("\nQuarta-Feira\n");
+    //    break;
+    //    case 5: printf("\nQuinta-Feira\n");
+    //    break;
+    //    case 6: printf("\nSexta-Feira\n");
+    //    break;
+    //    case 7: printf("\nSabado\n");
+    //    break;
+    //    default: printf("\nValor nao correspondente a semana.\n");
+    //}
+
+
+
+
+    //n=7
+    //float x,y,r;
+    //int a;
+    //printf("\n Digite o dois numeros interios quaisquer em ordem decrescente:\n");
+    //scanf("%f %f",&x,&y);
+    //printf("\n Agora digite 1 para efetuar a soma entre os numeros digitados, 2 para subtracao, 3 para multiplicacao e 4 para divisao.\n");
+    //scanf("%d",&a);
+    //if(a==1)
+    //{
+    //    r=x+y;
+    //    printf("\n O resultadado da soma (+) e': %.1f",r);
+    //}
+    //if(a==2)
+    //{
+    //    r=x-y;
+    //    printf("\n O resultadado da subtracao (-) e': %.1f",r);
+    //}
+    //if(a==3)
+    //{
+    //    r=x*y;
+    //    printf("\n O resultadado da multiplicacao (*) e': %.1f",r);
+    //}
+    //if(a==4&&x>y&&y!=0)
+    //{
+    //    r=x/y;
+    //    printf("\n O resultadado da divisao (/) e': %.2f",r);
+    //}
+    //if(a==4&&y==0)
+    //{
+    //    printf("\n Nao e' possivel calcular a divisao.\n");
+    //}
+    //if(a!=1&&a!=2&&a!=3&&a!=4)
+    //{
+    //    printf("\n Numero invalido.\n");
+    //}
+ return 0;
+}
+
